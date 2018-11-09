@@ -1,0 +1,24 @@
+.loaderDiv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  padding: 7rem 0;
+}
+
+.loader{
+	height: 70px;
+	width: 70px;
+	border-radius: 100%;
+	border: 4px solid #029e74;
+	border-bottom-color: #f7f7f7;
+	animation: 1.1s rotate infinite linear;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

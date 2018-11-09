@@ -1,0 +1,24 @@
+.navbarDiv {
+    height: 4.5rem;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.navbarLogo{
+	text-decoration: none !important;
+	color: #000;
+	transition: .2s;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.navbarLogo:hover{
+	color: #000;
+	opacity: .7;
+}

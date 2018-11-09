@@ -1,0 +1,13 @@
+.searchResultDiv{
+	border-bottom: 1px solid #029e7433;
+}
+
+.searchResult{
+	margin: 0;
+  padding: 1.8rem .2rem;
+	font-size: 1.1rem;
+	transition: .1s;
+}
+.searchResult:hover{
+	background-color: #029e7411;
+}

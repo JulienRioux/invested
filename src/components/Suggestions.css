@@ -1,0 +1,29 @@
+.suggestionDiv{
+	display: flex;
+	flex-direction: column;
+}
+
+.suggestionButton{
+	background-color: #fff;
+	border-color: #029e74;
+	color: #029e74;
+	border-radius: 4px;
+	padding: 8px 50px;
+	/* width: 120px; */
+	cursor: pointer;
+	transition: .2s;
+	margin-right: 8px;
+	outline: none !important;
+	white-space: nowrap;
+	font-size: .8rem;
+}
+.suggestionButton:hover{
+	background-color: #029e7411;
+}
+
+.suggestionsList{
+	display: flex;
+	padding: 10px 0 50px;
+	overflow-x: scroll;
+
+}
