@@ -1,0 +1,32 @@
+.cardDiv{
+	padding: 4rem 0;
+}
+
+.cardTitle{
+  font-size: 3rem;
+	padding-bottom: .7rem;
+}
+
+.supTitle{
+	font-size: 1.5rem;
+	color: #029e74;
+	margin-bottom: -.4rem;
+}
+
+.infoRow{
+	display: flex;
+	justify-content: space-between;
+	padding: .6rem;
+}
+
+.infoLabel{
+	font-weight: bold;
+}
+
+.infoData{
+  font-weight: bold;
+}
+
+.darkRow{
+	background-color: #029e7411;
+}

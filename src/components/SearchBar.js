@@ -4,14 +4,20 @@ import Ionicon from 'react-ionicons';
 import Loader from "./Loader";
 import SearchResult from "./SearchResult";
 import Suggestions from "./Suggestions";
+import PresentationCard from "./PresentationCard";
 
-let fetchUrl = "https://invested-api.appspot.com";
+// let fetchUrl = "https://invested-api.appspot.com";
+
+let fetchUrl = "https://investor-app-api.herokuapp.com";
+
+// let fetchUrl = "http://localhost:3001";
 
 
 export default class SearchBar extends Component {
 	state = {
 		searchInput: "",
 		data: [],
+		infoList: [],
 		error: false,
 		isLoading: false
 	}
@@ -45,9 +51,10 @@ export default class SearchBar extends Component {
 		})
 		.then(response => response.json())
 		  .then(async data => {
-				console.log(data.data);
+				console.log(data.infoList);
 				await this.setState({
 					data: data.resultsList,
+					infoList: data.infoList,
 					error: data.error,
 					isLoading: false
 				})
@@ -159,12 +166,17 @@ export default class SearchBar extends Component {
 					</form>
 				</div>
 				<div className="allSearchResult">
+
 					{ data.length > 0 ? (
 						<div>
 							<button
 								onClick={ this.resetSearch }
 								className="resetBtn">reset rearch</button>
-							<h2 className="resultTitle">{ resultType }</h2>
+							<PresentationCard
+								searchInput={ this.state.searchInput }
+								infoList={ this.state.infoList }
+								currentSearchType={ this.props.currentSearchType } />
+						  <h2 className="resultTitle">{ resultType }</h2>
 						</div>
 					) : (
 						<Suggestions
